@@ -1,0 +1,16 @@
+extends layout
+
+mixin message(message)
+    li(class="message")
+        p(class="username")=message.user
+        p(class="text")=message.text
+
+block content
+    .hero
+        h1=title
+        h2 Let's show our messages
+        button 
+            a(href="new") Add a message
+        ul
+            - for (let message of messages) 
+                +message(message)

@@ -1,0 +1,18 @@
+extends layout
+
+mixin input(name)
+    .input-container
+        label(for=`input-${name}`)=name
+        input(name=`input-${name}`)
+
+block content
+    .form-container
+        h1 Enter your message
+        form(method="POST" action="/new")
+            +input("Name")
+            +input("Message")
+            button(type="submit" class="send") Send
+        button 
+            a(href="/") Get Back
+        
+
