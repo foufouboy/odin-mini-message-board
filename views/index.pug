@@ -2,8 +2,8 @@ extends layout
 
 mixin message(message)
     li(class="message")
-        p(class="username")=message.user
-        p(class="text")=message.text
+        p(class="username")=message.username
+        p(class="text")=message.message
 
 block content
     .hero
